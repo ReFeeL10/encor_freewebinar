@@ -1,0 +1,57 @@
+
+https://www.postman.com/downloads/
+
+https://devnetsandbox.cisco.com
+
+CSR1000V Host: ios-xe-mgmt.cisco.com
+SSH Port: 8181 
+NETCONF Port: 10000 
+RESTCONF Ports: 9443 (HTTPS) 
+Username: developer
+Password: C1sco12345
+
+==== Get RESTCONF =============================
+
+HTTP Verb = GET
+URL = https://ios-xe-mgmt.cisco.com:9443/restconf/
+Header = Accept: application/yang-data+json
+
+
+==== Get Hostname =============================
+
+HTTP Verb = GET
+URL = https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native/hostname
+Header = Accept: application/yang-data+json
+
+
+==== Get Interface =============================
+
+HTTP Verb = GET
+URL = https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native/interface
+Header = Accept: application/yang-data+json
+
+
+==== Get Interface =============================
+
+HTTP Verb = GET
+URL = https://ios-xe-mgmt.cisco.com:9443/restconf/data/ietf-interfaces:interfaces
+Header = Content-Type: application/yang-data+json
+Header = Accept: application/yang-data+json
+DATA =
+{
+    "ietf-interfaces:interface": {
+        "name": "Loopback0",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+            "address": [
+                {
+                    "ip": "10.1.1.1",
+                    "netmask": "255.255.255.255"
+                }
+            ]
+        },
+        "ietf-ip:ipv6": {}
+    }
+}
+
