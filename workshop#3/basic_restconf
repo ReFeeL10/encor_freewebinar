@@ -31,22 +31,22 @@ URL = https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:nativ
 Header = Accept: application/yang-data+json
 
 
-==== Get Interface =============================
+==== Configure Interface =============================
 
-HTTP Verb = GET
+HTTP Verb = POST
 URL = https://ios-xe-mgmt.cisco.com:9443/restconf/data/ietf-interfaces:interfaces
 Header = Content-Type: application/yang-data+json
 Header = Accept: application/yang-data+json
 DATA =
 {
     "ietf-interfaces:interface": {
-        "name": "Loopback0",
+        "name": "Loopback999",
         "type": "iana-if-type:softwareLoopback",
         "enabled": true,
         "ietf-ip:ipv4": {
             "address": [
                 {
-                    "ip": "10.1.1.1",
+                    "ip": "99.99.99.99",
                     "netmask": "255.255.255.255"
                 }
             ]
