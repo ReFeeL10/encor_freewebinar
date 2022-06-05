@@ -7,6 +7,15 @@ no ip http secure-server
 no netconf-yang
 no restconf
 
+CSR#show run | sec trustpoint
+crypto pki trustpoint TP-self-signed-504982210
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-504982210
+ revocation-check none
+ rsakeypair TP-self-signed-504982210
+ 
+no crypto pki trustpoint TP-self-signed-504982210
+
 ip http server
 ip http secure-server
 netconf-yang
