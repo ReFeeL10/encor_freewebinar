@@ -1,4 +1,19 @@
 =======
+Clear Cert on CSR1000v
+=======
+
+no ip http server
+no ip http secure-server
+no netconf-yang
+no restconf
+
+ip http server
+ip http secure-server
+netconf-yang
+restconf
+
+
+=======
 Task1
 =======
 
